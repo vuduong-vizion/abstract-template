@@ -302,5 +302,13 @@ button {
   bottom: 70px;
   right: 100px;
 }
+.footer-copyright--logo {
+  margin-bottom: 1rem;
+}
+.footer-copyright--text {
+  max-width: 260px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
 
 /*# sourceMappingURL=style.css.map */
