@@ -1,0 +1,44 @@
+.header {
+    padding: 19px 0;
+    background-color: $black;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-left,
+    &-right {
+        display: flex;
+        align-items: center;
+    }
+
+    &-logo {
+        transition: linear 0.2s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &--image {
+            height: 32px;
+        }
+    }
+
+    &-help {
+        display: flex;
+        margin-left: 12.8px;
+        padding-left: 12.8px;
+        border-left: 2px solid $white;
+
+        &--h3 {
+            text-transform: capitalize;
+
+            &:hover {
+                text-decoration-color: $heading-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}

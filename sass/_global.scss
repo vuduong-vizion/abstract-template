@@ -1,0 +1,68 @@
+.container {
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body {
+    line-height: 1;
+    font-family: $font;
+    color: $text-color;
+    font-weight: 400;
+    background-color: white;
+}
+
+button {
+    display: inline-block;
+    font-family: $font;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 10px 22px;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &--request {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        color: $white;
+        background-color: $black;
+        border: 1px solid $white;
+        border-radius: 0.5rem;
+    }
+
+    &--signIn {
+        margin-left: 1rem;
+        padding: 10px 32px;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        color: $white;
+        background-color: $bg-blue;
+        border: 1px solid $blue;
+        border-radius: 0.5rem;
+        transition: linear 0.2s;
+
+        &:hover {
+            background-color: #fff;
+            color: $text-color;
+        }
+    }
+}
+
+.footer-text {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    color: $white;
+    margin-bottom: 0.5rem;
+    transition: linear 0.2s;
+}

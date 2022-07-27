@@ -1,0 +1,55 @@
+.service {
+    padding-top: 190px;
+    padding-bottom: 130px;
+    background-color: $white;
+
+    &-container {
+        max-width: 920px;
+        margin: 0 auto;
+    }
+
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+
+    &-item {
+        display: flex;
+        gap: 0 30px;
+
+        &--logo {
+            height: 81px;
+        }
+    }
+
+    &-item--right {
+        max-width: 320px;
+    }
+
+    &-heading,
+    &-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $text-color;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &-text {
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    &-learn {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: $text-blue-color;
+        transition: linear 0.2s;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
