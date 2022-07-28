@@ -1,68 +1,69 @@
 .footer {
-    padding-top: 50px;
-    background-color: $black;
-    padding-bottom: 170px;
-    position: relative;
+  padding-top: 50px;
+  background-color: $black;
+  padding-bottom: 170px;
+  position: relative;
 
-    &-list {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &-item {
+    max-width: 275px;
+  }
+
+  &-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: $white;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+  }
+
+  &-link {
+    text-transform: capitalize;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &-contact {
+    strong {
+      text-transform: capitalize;
+      display: block;
+      cursor: auto;
+      margin-bottom: 0.5rem;
     }
 
-    &-item {
-        max-width: 275px;
+    span {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-margin {
+    margin-bottom: 1.5rem;
+  }
+
+  &-copyright {
+    position: absolute;
+    bottom: 70px;
+    right: 100px;
+
+    &--logo {
+      margin-bottom: 1rem;
     }
 
-    &-heading {
-        font-size: 1.5rem;
-        font-weight: 700;
-        line-height: 1.5rem;
-        color: $white;
-        margin-bottom: 1rem;
-        text-transform: capitalize;
+    &--text {
+      max-width: 260px;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
     }
+  }
 
-    &-link {
-        text-transform: capitalize;
 
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    &-contact {
-        strong {
-            text-transform: capitalize;
-            display: block;
-            cursor: auto;
-            margin-bottom: 0.5rem;
-
-        }
-
-        span {
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    &-margin {
-        margin-bottom: 1.5rem;
-    }
-
-    &-copyright {
-        position: absolute;
-        bottom: 70px;
-        right: 100px;
-
-        &--logo {
-            margin-bottom: 1rem;
-        }
-
-        &--text {
-            max-width: 260px;
-            font-size: 1.25rem;
-            line-height: 1.5rem;
-        }
-    }
 }
