@@ -129,72 +129,22 @@ button {
   transition: linear 0.2s;
 }
 
-.header {
-  padding: 19px 0;
-  background-color: #000;
-}
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header-left, .header-right {
-  display: flex;
-  align-items: center;
-}
-.header-logo {
-  transition: linear 0.2s;
-}
-.header-logo:hover {
-  opacity: 0.7;
-}
-.header-logo--image {
-  height: 32px;
-}
-.header-help {
-  display: flex;
-  margin-left: 12.8px;
-  padding-left: 12.8px;
-  border-left: 2px solid #fff;
-}
-.header-help--h3 {
-  text-transform: capitalize;
-}
-.header-help--h3:hover {
-  text-decoration-color: #fff;
-  text-decoration: underline;
-}
-.header-hamburger {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-@media (min-width: 0) and (max-width: 1023px) {
-  .header-right {
-    display: none;
-  }
-  .header-hamburger {
-    display: block;
-  }
-}
-
 .toggler {
   /* ALWAYS KEEPING THE TOGGLER OR THE CHECKBOX ON TOP OF EVERYTHING :  */
   z-index: 2;
   height: 50px;
   width: 50px;
-  position: relative;
-  top: 10px;
-  right: 15px;
+  position: absolute;
+  top: -20px;
+  right: 40px;
   cursor: pointer;
   opacity: 0;
 }
 
 .hamburger {
   position: absolute;
-  top: 15px;
-  right: 5px;
+  top: -20px;
+  right: 40px;
   height: 40px;
   width: 70px;
   padding: 0.6rem;
@@ -252,10 +202,14 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* MAIN MENU WITH THE WHITE BACKGROUND AND THE TEXT :  */
 .menu {
-  background: white;
-  width: 0%;
+  top: 70px;
+  left: 0;
+  position: fixed;
+  background: transparent;
+  width: 100%;
   /* APPLYING TRANSITION TO THE MENU :  */
   transition: all 0.4s ease;
+  z-index: 99;
 }
 
 /* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
@@ -265,10 +219,8 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* STYLING THE LIST :  */
 .menu > div > ul {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
   top: 70px;
+  left: 0;
   padding-left: 10px;
   /* HIDDEN INITIALLY  :  */
   visibility: hidden;
@@ -276,11 +228,10 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 .menu > div > ul > li {
   list-style: none;
-  padding: 0.5rem;
 }
 
 .menu > div > ul > li > a {
-  color: black;
+  color: #fff;
   text-decoration: none;
   font-size: 2rem;
   z-index: 99;
@@ -295,6 +246,74 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 .toggler:checked ~ .menu > div > ul > li > a:hover {
   color: orange;
+}
+
+.header {
+  padding: 19px 0;
+  background-color: #000;
+  position: relative;
+  border-top: 0.5px solid #8C8D8D;
+  border-bottom: 0.5px solid #8C8D8D;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  transition: linear 0.2s;
+}
+.header-logo:hover {
+  opacity: 0.7;
+}
+.header-logo--image {
+  height: 32px;
+}
+.header-help {
+  display: flex;
+  margin-left: 12.8px;
+  padding-left: 12.8px;
+  border-left: 2px solid #fff;
+}
+.header-help--h3 {
+  text-transform: capitalize;
+}
+.header-help--h3:hover {
+  text-decoration-color: #fff;
+  text-decoration: underline;
+}
+.header-hamburger {
+  display: none;
+  position: relative;
+}
+.header-menu--ul {
+  padding: 50px 0;
+  background-color: #000;
+  text-align: center;
+}
+.header-menu--li {
+  max-width: 485px;
+  padding: 16px 0;
+  margin: 0 auto;
+}
+.header-menu--li-first {
+  border-bottom: 1px solid #8C8D8D;
+}
+.header-menu--a {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+@media (min-width: 0) and (max-width: 1023px) {
+  .header-right {
+    display: none;
+  }
+  .header-hamburger {
+    display: block;
+  }
 }
 
 .search {
