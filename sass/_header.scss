@@ -4,6 +4,7 @@
   position: relative;
   border-top: 0.5px solid $gray;
   border-bottom: 0.5px solid $gray;
+  z-index: 99;
 
   &-container {
     display: flex;
@@ -45,6 +46,10 @@
     }
   }
 
+  &-search--icon {
+    display: none;
+  }
+
   &-hamburger {
     display: none;
     position: relative;
@@ -68,10 +73,14 @@
     }
 
     &--a {
-      font-size: 1.5rem;
-      font-weight: 300;
-    }
+      font-size: 1.5rem !important;
+      font-weight: 400 !important;
+      // transition: all 0.5s;
 
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 
   @include tablet {
@@ -81,6 +90,44 @@
 
     &-hamburger {
       display: block;
+    }
+
+    &-search--icon {
+      display: block;
+      position: absolute;
+      top: 24px;
+      right: 115px;
+      cursor: pointer;
+
+      i {
+        color: $white;
+        font-size: 1.5rem;
+
+      }
+    }
+  }
+
+  @media (max-width: $sm) {
+    height: 100px;
+
+    &-container {
+      display: block;
+    }
+
+    &-search--icon {
+
+      top: 58px;
+      left: 16px;
+
+    }
+  }
+
+  @media (max-width: 320px) {
+
+    &-help {
+      &--h3 {
+        font-size: 1rem;
+      }
     }
   }
 }

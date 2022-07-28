@@ -16,7 +16,7 @@
   right: 40px;
   height: 40px;
   width: 70px;
-  padding: 0.6rem;
+  padding: 15px;
 
   /* FOR DISPLAYING EVERY ELEMENT IN THE CENTER : */
 
@@ -44,7 +44,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .hamburger>div::after {
   content: "";
   position: absolute;
-  top: -10px;
+  top: -7px;
   background: white;
   width: 100%;
   height: 2px;
@@ -52,7 +52,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 }
 
 .hamburger>div::after {
-  top: 10px;
+  top: 7px;
 }
 
 /* IF THE TOGGLER IS IN ITS CHECKED STATE, THEN SETTING THE BACKGROUND OF THE MIDDLE LAYER TO COMPLETE BLACK AND OPAQUE :  */
@@ -78,7 +78,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 /* MAIN MENU WITH THE WHITE BACKGROUND AND THE TEXT :  */
 
 .menu {
-  top: 70px;
+  top: 72px;
   left: 0;
   position: fixed;
   background: transparent;
@@ -87,8 +87,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
   /* APPLYING TRANSITION TO THE MENU :  */
 
-  transition: all 0.4s ease;
-  z-index: 99;
+  // transition: all 0.4s ease;
 }
 
 /* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
@@ -119,17 +118,23 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   text-decoration: none;
   font-size: 2rem;
   //   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  z-index: 99;
 }
 
 /* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
 
 .toggler:checked~.menu>div>ul {
-  transition: visibility 0.4s ease;
-  transition-delay: 0.1s;
+  // transition: visibility 0.4s ease;
+  // transition-delay: 0.1s;
   visibility: visible;
 }
 
 .toggler:checked~.menu>div>ul>li>a:hover {
-  color: orange;
+  // color: orange;
+}
+
+@media (max-width: $sm) {
+  .hamburger {
+    top: 0;
+    left: 15px;
+  }
 }

@@ -147,7 +147,7 @@ button {
   right: 40px;
   height: 40px;
   width: 70px;
-  padding: 0.6rem;
+  padding: 15px;
   /* FOR DISPLAYING EVERY ELEMENT IN THE CENTER : */
   display: flex;
   align-items: center;
@@ -171,7 +171,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .hamburger > div::after {
   content: "";
   position: absolute;
-  top: -10px;
+  top: -7px;
   background: white;
   width: 100%;
   height: 2px;
@@ -179,7 +179,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 }
 
 .hamburger > div::after {
-  top: 10px;
+  top: 7px;
 }
 
 /* IF THE TOGGLER IS IN ITS CHECKED STATE, THEN SETTING THE BACKGROUND OF THE MIDDLE LAYER TO COMPLETE BLACK AND OPAQUE :  */
@@ -202,14 +202,12 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* MAIN MENU WITH THE WHITE BACKGROUND AND THE TEXT :  */
 .menu {
-  top: 70px;
+  top: 72px;
   left: 0;
   position: fixed;
   background: transparent;
   width: 100%;
   /* APPLYING TRANSITION TO THE MENU :  */
-  transition: all 0.4s ease;
-  z-index: 99;
 }
 
 /* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
@@ -234,26 +232,26 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
-  z-index: 99;
 }
 
 /* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
 .toggler:checked ~ .menu > div > ul {
-  transition: visibility 0.4s ease;
-  transition-delay: 0.1s;
   visibility: visible;
 }
 
-.toggler:checked ~ .menu > div > ul > li > a:hover {
-  color: orange;
+@media (max-width: 576px) {
+  .hamburger {
+    top: 0;
+    left: 15px;
+  }
 }
-
 .header {
   padding: 19px 0;
   background-color: #000;
   position: relative;
   border-top: 0.5px solid #8C8D8D;
   border-bottom: 0.5px solid #8C8D8D;
+  z-index: 99;
 }
 .header-container {
   display: flex;
@@ -286,6 +284,9 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   text-decoration-color: #fff;
   text-decoration: underline;
 }
+.header-search--icon {
+  display: none;
+}
 .header-hamburger {
   display: none;
   position: relative;
@@ -304,22 +305,52 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   border-bottom: 1px solid #8C8D8D;
 }
 .header-menu--a {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
 }
-@media (min-width: 0) and (max-width: 1023px) {
+.header-menu--a:hover {
+  opacity: 0.7;
+}
+@media (max-width: 1023px) {
   .header-right {
     display: none;
   }
   .header-hamburger {
     display: block;
   }
+  .header-search--icon {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 115px;
+    cursor: pointer;
+  }
+  .header-search--icon i {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    height: 100px;
+  }
+  .header-container {
+    display: block;
+  }
+  .header-search--icon {
+    top: 58px;
+    left: 16px;
+  }
+}
+@media (max-width: 320px) {
+  .header-help--h3 {
+    font-size: 1rem;
+  }
 }
 
 .search {
   background-color: #dadbf1;
-  padding-top: 140px;
-  padding-bottom: 115px;
+  padding: 140px 15px 115px 15px;
 }
 .search-container {
   max-width: 720px;
@@ -362,6 +393,21 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 }
 .search-arrow i:hover {
   color: #4c5fd5;
+}
+@media (max-width: 767px) {
+  .search-title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 1023px) {
+  .search-title {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 576px) {
+  .search-title {
+    font-size: 1.8rem;
+  }
 }
 
 .service {
@@ -407,6 +453,36 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 }
 .service-learn:hover {
   text-decoration: underline;
+}
+@media (max-width: 767px) {
+  .service {
+    padding-top: 105px;
+  }
+  .service-list {
+    display: block;
+    margin-bottom: 0;
+  }
+  .service-item {
+    margin-bottom: 105px;
+  }
+  .service-item--right {
+    max-width: 425px;
+  }
+}
+@media (max-width: 1023px) {
+  .service {
+    padding-bottom: 0;
+  }
+  .service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  .service-item--logo {
+    height: 51px;
+  }
 }
 
 .footer {
@@ -460,6 +536,43 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   max-width: 260px;
   font-size: 1.25rem;
   line-height: 1.5rem;
+}
+@media (max-width: 1280px) {
+  .footer-item {
+    max-width: 175px;
+  }
+}
+@media (max-width: 1023px) {
+  .footer {
+    padding-bottom: 245px;
+  }
+  .footer-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 55px 0;
+    margin-left: 70px;
+  }
+  .footer-copyright {
+    bottom: 60px;
+    right: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    padding-bottom: 65px;
+  }
+  .footer-list {
+    margin-left: 30px;
+  }
+  .footer-copyright {
+    position: relative;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media (max-width: 576px) {
+  .footer-list {
+    margin-left: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

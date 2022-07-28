@@ -1,20 +1,25 @@
 $xxl: 1024px;
 $xl: 1023px;
 $md: 767px;
+$sm: 576px;
 $xs: 0;
 
 @mixin mobile {
-  @media (min-width: #{$xs}) and (max-width: #{$md}) {
+  @media (max-width: #{$md}) {
     @content;
   }
 }
+
 @mixin tablet {
-  @media (min-width: #{$xs}) and (max-width: #{$xl}) {
+  @media (max-width: #{$xl}) {
     @content;
   }
 }
+
+
+
 @mixin desktop {
-  @media (min-width: #{xxl}) {
+  @media (min-width: #{$xxl}) {
     @content;
   }
 }

@@ -65,5 +65,47 @@
     }
   }
 
+  @media (max-width: 1280px) {
+    &-item {
+      max-width: 175px;
+    }
+  }
+
+  @include tablet {
+    padding-bottom: 245px;
+
+    &-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 55px 0;
+      margin-left: 70px;
+    }
+
+    &-copyright {
+      bottom: 60px;
+      right: 70px;
+    }
+  }
+
+  @include mobile {
+    // display: none;
+    padding-bottom: 65px;
+
+    &-list {
+      margin-left: 30px;
+    }
+
+    &-copyright {
+      position: relative;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  @media (max-width: $sm) {
+    &-list {
+
+      margin-left: 0;
+    }
+  }
 
 }
