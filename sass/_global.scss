@@ -29,21 +29,25 @@ button {
     cursor: pointer;
 
     &--request {
+        font-family: $font-bold;
         font-size: 1.5rem;
         line-height: 1.5rem;
-        font-weight: 400;
+        font-weight: 500;
         color: $white;
         background-color: $black;
         border: 1px solid $white;
         border-radius: 0.5rem;
     }
 
+
+
     &--signIn {
+        font-family: $font-bold;
         margin-left: 1rem;
         padding: 10px 32px;
         font-size: 1.5rem;
         line-height: 1.5rem;
-        font-weight: 400;
+        font-weight: 500;
         color: $white;
         background-color: $bg-blue;
         border: 1px solid $blue;

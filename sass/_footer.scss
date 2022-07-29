@@ -11,6 +11,10 @@
 
   &-item {
     max-width: 275px;
+
+    ul {
+      list-style: none;
+    }
   }
 
   &-heading {

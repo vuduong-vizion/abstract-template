@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "GT-America-Standard-Thin-Trial";
+  src: url("./../assets/fonts/GT-America-Standard-Regular-Trial");
+}
+@font-face {
+  font-family: "GT-America-Standard-Medium-Trial";
+  src: url("./../assets/fonts/GT-America-Standard-Regular-Trial");
+}
+@font-face {
+  font-family: "GT-America-Standard-Bold-Trial";
+  src: url("./../assets/fonts/GT-America-Standard-Regular-Trial");
+}
 html {
   box-sizing: border-box;
 }
@@ -71,7 +83,7 @@ h6 {
 
 body {
   line-height: 1;
-  font-family: "Roboto", sans-serif;
+  font-family: "GT America Standard", sans-serif;
   color: #191a1b;
   font-weight: 400;
   background-color: white;
@@ -79,7 +91,7 @@ body {
 
 button {
   display: inline-block;
-  font-family: "Roboto", sans-serif;
+  font-family: "GT America Standard", sans-serif;
   outline: none;
   border: none;
   cursor: pointer;
@@ -94,20 +106,22 @@ button {
   cursor: pointer;
 }
 .btn--request {
+  font-family: "GT-America-Standard-Bold-Trial";
   font-size: 1.5rem;
   line-height: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #fff;
   background-color: #000;
   border: 1px solid #fff;
   border-radius: 0.5rem;
 }
 .btn--signIn {
+  font-family: "GT-America-Standard-Bold-Trial";
   margin-left: 1rem;
   padding: 10px 32px;
   font-size: 1.5rem;
   line-height: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #fff;
   background-color: #4c5fd5;
   border: 1px solid #4c5fd5;
@@ -243,6 +257,13 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   .hamburger {
     top: 0;
     left: 15px;
+  }
+  .toggler {
+    top: 0;
+    left: 35px;
+  }
+  .menu {
+    top: 100px;
   }
 }
 .header {
@@ -416,13 +437,13 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   background-color: #fff;
 }
 .service-container {
-  max-width: 920px;
+  max-width: 1450px;
   margin: 0 auto;
 }
 .service-list {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 100px;
+  gap: 0 10px;
 }
 .service-item {
   display: flex;
@@ -432,7 +453,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   height: 81px;
 }
 .service-item--right {
-  max-width: 320px;
+  max-width: 570px;
 }
 .service-heading, .service-text {
   font-size: 1.5rem;
@@ -454,6 +475,11 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .service-learn:hover {
   text-decoration: underline;
 }
+@media (max-width: 576px) {
+  .service-item--logo {
+    height: 51px;
+  }
+}
 @media (max-width: 767px) {
   .service {
     padding-top: 105px;
@@ -469,6 +495,14 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     max-width: 425px;
   }
 }
+@media (max-width: 992px) {
+  .service-container {
+    max-width: 635px !important;
+  }
+  .service-item--right {
+    max-width: 295px !important;
+  }
+}
 @media (max-width: 1023px) {
   .service {
     padding-bottom: 0;
@@ -479,9 +513,12 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     align-items: center;
   }
 }
-@media (max-width: 576px) {
-  .service-item--logo {
-    height: 51px;
+@media (max-width: 1440px) {
+  .service-container {
+    max-width: 920px;
+  }
+  .service-item--right {
+    max-width: 375px;
   }
 }
 
@@ -497,6 +534,9 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 }
 .footer-item {
   max-width: 275px;
+}
+.footer-item ul {
+  list-style: none;
 }
 .footer-heading {
   font-size: 1.5rem;
