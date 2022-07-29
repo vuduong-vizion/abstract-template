@@ -1,13 +1,5 @@
 @font-face {
-  font-family: "GT-America-Standard-Thin-Trial";
-  src: url("./../assets/fonts/GT-America-Standard-Regular-Trial");
-}
-@font-face {
-  font-family: "GT-America-Standard-Medium-Trial";
-  src: url("./../assets/fonts/GT-America-Standard-Regular-Trial");
-}
-@font-face {
-  font-family: "GT-America-Standard-Bold-Trial";
+  font-family: "GT America Standard";
   src: url("./../assets/fonts/GT-America-Standard-Regular-Trial");
 }
 html {
@@ -82,6 +74,7 @@ h6 {
 }
 
 body {
+  position: relative;
   line-height: 1;
   font-family: "GT America Standard", sans-serif;
   color: #191a1b;
@@ -613,6 +606,28 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   .footer-list {
     margin-left: 0;
   }
+}
+
+.help-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #4c5fd5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.help-button i {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 7px;
+  border: 1px solid #fff;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
