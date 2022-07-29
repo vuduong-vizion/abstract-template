@@ -1,6 +1,6 @@
 @font-face {
   font-family: "GT America Standard";
-  src: url("./../assets/fonts/GT-America-Standard-Regular-Trial");
+  src: url("./../assets/fonts/GT-America-Standard-Regular-Trial.otf");
 }
 html {
   box-sizing: border-box;
@@ -263,8 +263,8 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   padding: 19px 0;
   background-color: #000;
   position: relative;
-  border-top: 0.5px solid #8C8D8D;
-  border-bottom: 0.5px solid #8C8D8D;
+  border-top: 0.5px solid #8c8d8d;
+  border-bottom: 0.5px solid #8c8d8d;
   z-index: 99;
 }
 .header-container {
@@ -316,7 +316,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   margin: 0 auto;
 }
 .header-menu--li-first {
-  border-bottom: 1px solid #8C8D8D;
+  border-bottom: 1px solid #8c8d8d;
 }
 .header-menu--a {
   font-size: 1.5rem !important;

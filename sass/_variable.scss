@@ -1,12 +1,12 @@
 //font
 
 @font-face {
-    font-family: "GT America Standard";
-    src: url('./../assets/fonts/GT-America-Standard-Regular-Trial');
+  font-family: "GT America Standard";
+  src: url("./../assets/fonts/GT-America-Standard-Regular-Trial.otf");
 }
 
-$font-thin: 'GT-America-Standard-Thin-Trial';
-$font: 'GT America Standard', sans-serif;
+$font-thin: "GT-America-Standard-Thin-Trial";
+$font: "GT America Standard", sans-serif;
 $font-bold: "GT-America-Standard-Bold-Trial";
 
 //headings
@@ -18,7 +18,7 @@ $text-blue-color: #4c5fd5;
 $blue: #4c5fd5;
 $white: #fff;
 $black: #000;
-$gray: #8C8D8D;
+$gray: #8c8d8d;
 
 //background colors
 $bg-blue: #4c5fd5;
