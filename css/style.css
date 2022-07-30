@@ -93,7 +93,7 @@ button {
 .btn {
   display: inline-block;
   font-size: 1rem;
-  padding: 10px 22px;
+  padding: 10px 26px;
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
@@ -364,7 +364,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 .search {
   background-color: #dadbf1;
-  padding: 140px 15px 115px 15px;
+  padding: 130px 15px 120px 15px;
 }
 .search-container {
   max-width: 720px;
@@ -426,7 +426,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 .service {
   padding-top: 190px;
-  padding-bottom: 130px;
+  padding-bottom: 35px;
   background-color: #fff;
 }
 .service-container {
@@ -436,7 +436,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .service-list {
   display: flex;
   margin-bottom: 100px;
-  gap: 0 10px;
+  gap: 0 20px;
 }
 .service-item {
   display: flex;
@@ -446,7 +446,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   height: 81px;
 }
 .service-item--right {
-  max-width: 570px;
+  max-width: 580px;
 }
 .service-heading, .service-text {
   font-size: 1.5rem;
@@ -559,8 +559,8 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 }
 .footer-copyright {
   position: absolute;
-  bottom: 70px;
-  right: 100px;
+  bottom: 55px;
+  right: 110px;
 }
 .footer-copyright--logo {
   margin-bottom: 1rem;

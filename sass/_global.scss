@@ -1,73 +1,71 @@
 .container {
-    max-width: 1680px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 body {
-    position: relative;
-    line-height: 1;
-    font-family: $font;
-    color: $text-color;
-    font-weight: 400;
-    background-color: white;
+  position: relative;
+  line-height: 1;
+  font-family: $font;
+  color: $text-color;
+  font-weight: 400;
+  background-color: white;
 }
 
 button {
-    display: inline-block;
-    font-family: $font;
-    outline: none;
-    border: none;
-    cursor: pointer;
+  display: inline-block;
+  font-family: $font;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 .btn {
-    display: inline-block;
-    font-size: 1rem;
-    padding: 10px 22px;
-    text-align: center;
-    white-space: nowrap;
-    cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 10px 26px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
 
-    &--request {
-        font-family: $font-bold;
-        font-size: 1.5rem;
-        line-height: 1.5rem;
-        font-weight: 500;
-        color: $white;
-        background-color: $black;
-        border: 1px solid $white;
-        border-radius: 0.5rem;
+  &--request {
+    font-family: $font-bold;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: $white;
+    background-color: $black;
+    border: 1px solid $white;
+    border-radius: 0.5rem;
+  }
+
+  &--signIn {
+    font-family: $font-bold;
+    margin-left: 1rem;
+    padding: 10px 32px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: $white;
+    background-color: $bg-blue;
+    border: 1px solid $blue;
+    border-radius: 0.5rem;
+    transition: linear 0.2s;
+
+    &:hover {
+      background-color: #fff;
+      color: $text-color;
     }
-
-
-
-    &--signIn {
-        font-family: $font-bold;
-        margin-left: 1rem;
-        padding: 10px 32px;
-        font-size: 1.5rem;
-        line-height: 1.5rem;
-        font-weight: 500;
-        color: $white;
-        background-color: $bg-blue;
-        border: 1px solid $blue;
-        border-radius: 0.5rem;
-        transition: linear 0.2s;
-
-        &:hover {
-            background-color: #fff;
-            color: $text-color;
-        }
-    }
+  }
 }
 
 .footer-text {
-    display: block;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1rem;
-    color: $white;
-    margin-bottom: 0.5rem;
-    transition: linear 0.2s;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: $white;
+  margin-bottom: 0.5rem;
+  transition: linear 0.2s;
 }

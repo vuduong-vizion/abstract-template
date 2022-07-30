@@ -55,8 +55,8 @@
 
   &-copyright {
     position: absolute;
-    bottom: 70px;
-    right: 100px;
+    bottom: 55px;
+    right: 110px;
 
     &--logo {
       margin-bottom: 1rem;
@@ -107,9 +107,7 @@
 
   @media (max-width: $sm) {
     &-list {
-
       margin-left: 0;
     }
   }
-
 }
