@@ -132,15 +132,6 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   // color: orange;
 }
 
-// @include tablet {
-//   .toggler {
-//     right: -60px;
-//   }
-//   .hamburger {
-//     right: -60px;
-//   }
-// }
-
 @media (max-width: 912px) {
   .toggler,
   .hamburger {
@@ -172,22 +163,14 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 @media (max-width: 540px) {
   .toggler,
   .hamburger {
-    right: -20px;
+    right: -15px;
   }
 }
 
-// @media (max-width: $sm) {
-//   .hamburger {
-//     top: 0;
-//     left: 15px;
-//   }
-
-//   .toggler {
-//     top: 0;
-//     left: 35px;
-//   }
-
-//   .menu {
-//     top: 100px;
-//   }
-// }
+@media (max-width: 280px) {
+  .toggler,
+  .hamburger {
+    right: 160px;
+    top: 20px;
+  }
+}

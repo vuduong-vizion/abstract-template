@@ -104,7 +104,6 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 55px 0;
-      // margin-left: 70px;
     }
 
     &-copyright {
@@ -120,8 +119,7 @@
   }
 
   @include mobile {
-    // display: none;
-    padding-bottom: 65px;
+    padding-bottom: 60px;
 
     &-list {
       margin-left: 30px;

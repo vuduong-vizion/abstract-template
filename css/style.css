@@ -80,6 +80,7 @@ body {
   color: #191a1b;
   font-weight: 400;
   background-color: white;
+  overflow-x: hidden;
 }
 
 button {
@@ -288,7 +289,14 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 @media (max-width: 540px) {
   .toggler,
 .hamburger {
-    right: -20px;
+    right: -15px;
+  }
+}
+@media (max-width: 280px) {
+  .toggler,
+.hamburger {
+    right: 160px;
+    top: 20px;
   }
 }
 .header {
@@ -378,12 +386,27 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 }
 @media (max-width: 540px) {
   .header-search--icon {
-    right: 60px;
+    right: 50px;
+  }
+}
+@media (max-width: 393px) {
+  .header-help {
+    margin-left: 5px;
+    padding-left: 5px;
   }
 }
 @media (max-width: 320px) {
   .header-help--h3 {
     font-size: 1rem;
+  }
+}
+@media (max-width: 280px) {
+  .header {
+    height: 100px;
+  }
+  .header-search--icon {
+    top: 65px;
+    left: 17px;
   }
 }
 
@@ -435,17 +458,22 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 }
 @media (min-width: 0) and (max-width: 767px) {
   .search-title {
+    font-size: 4rem;
+    letter-spacing: -5px;
+  }
+}
+@media (max-width: 414px) {
+  .search-title {
     font-size: 2.5rem;
+    letter-spacing: -1px;
   }
 }
-@media (min-width: 0) and (max-width: 992px) {
-  .search-title {
-    font-size: 5rem;
+@media (max-width: 280px) {
+  .search {
+    padding-top: 95px;
   }
-}
-@media (max-width: 576px) {
   .search-title {
-    font-size: 1.8rem;
+    line-height: 2rem;
   }
 }
 
@@ -493,11 +521,6 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .service-learn:hover {
   text-decoration: underline;
 }
-@media (max-width: 576px) {
-  .service-item--logo {
-    height: 51px;
-  }
-}
 @media (min-width: 0) and (max-width: 767px) {
   .service {
     padding-top: 105px;
@@ -513,20 +536,12 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     max-width: 425px;
   }
 }
-@media (min-width: 0) and (max-width: 992px) {
+@media (max-width: 1440px) {
   .service-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 635px !important;
+    max-width: 920px;
   }
   .service-item--right {
-    max-width: 295px !important;
-  }
-}
-@media (max-width: 992px) {
-  .service-item--right {
-    max-width: 480px !important;
+    max-width: 375px;
   }
 }
 @media (min-width: xl) {
@@ -542,12 +557,35 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
     max-width: 250px !important;
   }
 }
-@media (max-width: 1440px) {
+@media (min-width: 0) and (max-width: 992px) {
   .service-container {
-    max-width: 920px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 635px !important;
   }
   .service-item--right {
-    max-width: 375px;
+    max-width: 295px !important;
+  }
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .service-item--right {
+    max-width: 310px !important;
+  }
+}
+@media (max-width: 576px) {
+  .service-item--logo {
+    height: 51px;
+  }
+}
+@media (max-width: 393px) {
+  .service-item--right {
+    max-width: 270px !important;
+  }
+}
+@media (max-width: 360px) {
+  .service-item--right {
+    max-width: 235px !important;
   }
 }
 
@@ -655,7 +693,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 }
 @media (min-width: 0) and (max-width: 767px) {
   .footer {
-    padding-bottom: 65px;
+    padding-bottom: 60px;
   }
   .footer-list {
     margin-left: 30px;
