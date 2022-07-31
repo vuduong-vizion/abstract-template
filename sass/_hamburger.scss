@@ -27,7 +27,7 @@
 
 /* CREATING THE MIDDLE LINE OF THE HAMBURGER : */
 
-.hamburger>div {
+.hamburger > div {
   position: relative;
   top: 0;
   left: 0;
@@ -40,8 +40,8 @@
 /* CREATING THE TOP AND BOTTOM LINES : 
 TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
-.hamburger>div::before,
-.hamburger>div::after {
+.hamburger > div::before,
+.hamburger > div::after {
   content: "";
   position: absolute;
   top: -7px;
@@ -51,17 +51,17 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   transition: all 0.4s ease;
 }
 
-.hamburger>div::after {
+.hamburger > div::after {
   top: 7px;
 }
 
 /* IF THE TOGGLER IS IN ITS CHECKED STATE, THEN SETTING THE BACKGROUND OF THE MIDDLE LAYER TO COMPLETE BLACK AND OPAQUE :  */
 
-.toggler:checked+.hamburger>div {
+.toggler:checked + .hamburger > div {
   background: rgba(0, 0, 0, 0);
 }
 
-.toggler:checked+.hamburger>div::before {
+.toggler:checked + .hamburger > div::before {
   top: 0;
   transform: rotate(45deg);
   background: white;
@@ -69,7 +69,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* AND ROTATING THE TOP AND BOTTOM LINES :  */
 
-.toggler:checked+.hamburger>div::after {
+.toggler:checked + .hamburger > div::after {
   top: 0;
   transform: rotate(135deg);
   background: white;
@@ -92,13 +92,13 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
 
-.toggler:checked~.menu {
+.toggler:checked ~ .menu {
   width: 100%;
 }
 
 /* STYLING THE LIST :  */
 
-.menu>div>ul {
+.menu > div > ul {
   top: 70px;
   left: 0;
   padding-left: 10px;
@@ -108,12 +108,12 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   visibility: hidden;
 }
 
-.menu>div>ul>li {
+.menu > div > ul > li {
   list-style: none;
   // padding: 0.5rem;
 }
 
-.menu>div>ul>li>a {
+.menu > div > ul > li > a {
   color: $white;
   text-decoration: none;
   font-size: 2rem;
@@ -122,28 +122,72 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 
 /* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
 
-.toggler:checked~.menu>div>ul {
+.toggler:checked ~ .menu > div > ul {
   // transition: visibility 0.4s ease;
   // transition-delay: 0.1s;
   visibility: visible;
 }
 
-.toggler:checked~.menu>div>ul>li>a:hover {
+.toggler:checked ~ .menu > div > ul > li > a:hover {
   // color: orange;
 }
 
-@media (max-width: $sm) {
+// @include tablet {
+//   .toggler {
+//     right: -60px;
+//   }
+//   .hamburger {
+//     right: -60px;
+//   }
+// }
+
+@media (max-width: 912px) {
+  .toggler,
   .hamburger {
-    top: 0;
-    left: 15px;
-  }
-
-  .toggler {
-    top: 0;
-    left: 35px;
-  }
-
-  .menu {
-    top: 100px;
+    right: -5px;
   }
 }
+
+@media (max-width: 820px) {
+  .toggler,
+  .hamburger {
+    right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggler,
+  .hamburger {
+    right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggler,
+  .hamburger {
+    right: 15px;
+  }
+}
+
+@media (max-width: 540px) {
+  .toggler,
+  .hamburger {
+    right: -20px;
+  }
+}
+
+// @media (max-width: $sm) {
+//   .hamburger {
+//     top: 0;
+//     left: 15px;
+//   }
+
+//   .toggler {
+//     top: 0;
+//     left: 35px;
+//   }
+
+//   .menu {
+//     top: 100px;
+//   }
+// }
